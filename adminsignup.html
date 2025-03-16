@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Sign Up - Virtual Marketplace</title>
+    <link rel="stylesheet" href="adminlogin.css"> 
+</head>
+<body>
+    <div class="login-container">
+        <h1>Admin Sign Up</h1>
+        <p>Create an admin account to access the dashboard.</p>
+        
+        <form id="admin-signup-form">
+            <div class="form-group">
+                <label for="full-name">Business Name:</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+
+            <button type="submit" class="login-button">SIGN UP</button>
+        </form>
+
+        <p class="forgot-password">
+            Already have an account? <a href="adminlogin.html">Login</a>
+        </p>
+    </div>
+
+    <script>
+        document.getElementById("admin-signup-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long!");
+                return;
+            }
+
+            const formData = new FormData(this);
+
+            fetch("adminsignup.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    alert(data.message);
+                    window.location.href = "adminlogin.html"; 
+                } else {
+                    alert(data.message); 
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An error occurred. Please try again.");
+            });
+        });
+    </script>
+</body>
+</html>

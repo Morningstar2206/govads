@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="businesshomepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="profile-section">
+            <div class="profile-pic"></div>
+            <p class="profile-name">John Doe</p>
+            <p class="profile-role">Admin</p>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="businessanalyticspage.html">Analytics</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+        </header>
+
+        <section class="dashboard">
+            <h2>Dashboard</h2>
+
+            <div class="metrics">
+                <div class="metric-box">
+                    <p>Total Visits</p>
+                    <h3>1200</h3>
+                </div>
+                <div class="metric-box">
+                    <p>Average Rating</p>
+                    <h3>4.2/5</h3>
+                </div>
+                <div class="metric-box">
+                    <p>Favorites</p>
+                    <h3>300</h3>
+                </div>
+                <div class="metric-box">
+                    <p>Revenue</p>
+                    <h3>$1200</h3>
+                </div>
+            </div>
+
+            <div class="graph-section">
+                <h3>Traffic & Reviews</h3>
+                <div class="graph-placeholder">
+                    <p>Line Chart Placeholder (Use Flask & Matplotlib/Plotly)</p>
+                </div>
+            </div>
+
+            <div class="graph-section">
+                <h3>Rating Distribution</h3>
+                <div class="graph-placeholder">
+                    <p>Bar Chart Placeholder (Use Flask & Matplotlib/Plotly)</p>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <div class="activity-box">
+                    <p><i class="fa fa-comment"></i> John D. left a 5-star review.</p>
+                    <p><i class="fa fa-star"></i> Jane S. favorited your business.</p>
+                    <p><i class="fa fa-eye"></i> 10 users viewed your profile today.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

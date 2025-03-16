@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics</title>
+    <link rel="stylesheet" href="businessanalyticspage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="profile-section">
+            <div class="profile-pic"></div>
+            <p class="profile-name">John Doe</p>
+            <p class="profile-role">Admin</p>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Profile</a></li>
+            <li><a href="businesshomepage.html">Dashboard</a></li>
+            <li><a href="businessanalyticspage.html">Analytics</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h2>Analytics</h2>
+            <div class="filter-options">
+                <button id="last7Days">Last 7 Days</button>
+                <button id="lastMonth">Last Month</button>
+                <button id="customRange">Custom Range</button>
+                <input type="date" id="startDate">
+                <input type="date" id="endDate">
+                <button id="applyCustomRange">Apply</button>
+            </div>
+            
+        </header>
+
+        <section class="analytics">
+            <h3>Key Metrics</h3>
+            <div class="metrics-grid">
+                <div class="metric-box"> <p>Total Visits</p><h3>1200</h3> </div>
+                <div class="metric-box"> <p>Average Rating</p><h3>4.2/5</h3> </div>
+                <div class="metric-box"> <p>Favorites</p><h3>300</h3> </div>
+                <div class="metric-box"> <p>Revenue</p><h3>$1200</h3> </div>
+                <div class="metric-box"> <p>New Reviews</p><h3>40</h3> </div>
+                <div class="metric-box"> <p>Clicks</p><h3>300</h3> </div>
+            </div>
+
+            <h3>Data Graph</h3>
+            <div class="graph-section">
+                <h4>Traffic Over Time</h4>
+                <div class="graph-placeholder">[Graph Placeholder]</div>
+                <button class="view-details">View Details</button>
+            </div>
+
+            <div class="graph-section">
+                <h4>Rating Distribution</h4>
+                <div class="graph-placeholder">[Bar Chart Placeholder]</div>
+                <button class="view-details">View Details</button>
+            </div>
+        </section>
+
+        <section class="insights">
+            <h3>Insights</h3>
+            <div class="insight-box">
+                <p>Your traffic increased by 15% compared to last month.</p>
+                <p>Your average rating improved by 0.2 points this month.</p>
+            </div>
+            <button onclick="window.location.href='businesstrafficanalytics.html'">Traffic Analytics</button>
+            <button onclick="window.location.href='businessreviewanalytics.html'">Review Analytics</button>
+            <button onclick="window.location.href='businessengagementanalytics.html'">Engagement Analytics</button>
+
+        </section>
+    </div>
+
+    <script src="businessanalyticspage.js"></script>
+
+</body>
+</html>
